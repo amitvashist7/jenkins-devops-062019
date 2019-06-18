@@ -1,0 +1,15 @@
+node {
+    
+   git 'https://github.com/amitvashist7/jenkins-devops-062019.git'
+
+   def project_path = "atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/"
+ 
+   dir(project_path) { 
+   sh label: '', script: 'mvn clean'
+   
+   sh label: '', script: 'mvn package'
+   
+   archive 'target/*.jar'
+   }
+    
+}
