@@ -1,0 +1,11 @@
+    1  apt-get update; apt-get install git -y
+    2  exit
+    3  ls
+    4  history 
+    5  cd jenkins-devops-062019/
+    6  ls
+    7  mkdir jenkins
+    8  cd jenkins/
+    9  ls
+   10  apt-get update; apt-get install default-jdk -y
+   11  history > Jenkins_History.txt
