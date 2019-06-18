@@ -1,6 +1,6 @@
 node {
  
- stage('Pull Git Repo') {
+ stage('Pull Git Latest Changes in the Repo') {
    git 'https://github.com/amitvashist7/jenkins-devops-062019.git'
 }
    def project_path = "atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/"
@@ -10,7 +10,7 @@ node {
    sh label: '', script: 'mvn clean'
    }
    
-   stage('Build Package') {
+   stage('Package Build') {
    sh label: '', script: 'mvn package'
    }
    
