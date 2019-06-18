@@ -1,4 +1,6 @@
-node{ 
+
+node {
+ 
  stage('Pull Git Repo') {
    git 'https://github.com/amitvashist7/jenkins-devops-062019.git'
 }
