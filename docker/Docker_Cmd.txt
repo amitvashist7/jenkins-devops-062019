@@ -10,3 +10,82 @@
     8  ls
     9  mkdir docker
    10  history > docker/Docker_Cmd.txt
+   11  git add . 
+   12  git commit -m "Docker Install History"
+   13  git push origin master 
+   14  history 
+   15  cd
+   16  ls
+   17  docker version 
+   18  docker images
+   19  uname -a 
+   20  cat /etc/*-release
+   21  docker run ubuntu echo "Welcome to Docker Demos"
+   22  docker images
+   23  docker run ubuntu cat /etc/*-release
+   24  cat /etc/*-release
+   25  docker run centos cat /etc/*-release
+   26  docker images 
+   27  docker pull amitvashist7/apache-ex4:latest
+   28  docker pull amitvashist7/busybox:v1
+   29  docker images 
+   30  docker logib 
+   31  docker login
+   32  docker pull amitvashist7/apache-ex4:latest
+   33  docker logout 
+   34  ls
+   35  docker ps 
+   36  docker ps -a 
+   37  docker run -it ubuntu 
+   38  uname -a 
+   39  docker run -it centos 
+   40  docker ps 
+   41  docker ps -a
+   42  docker ps 
+   43  docker attach 1587fbc96155
+   44  docker ps 
+   45  docker stop 1587fbc96155
+   46  docker ps 
+   47  docker ps -a 
+   48  docker start 1587fbc96155
+   49  docker ps -a 
+   50  docker ps 
+   51  docker attach 1587fbc96155
+   52  ls
+   53  docker kill  1587fbc96155
+   54  docker ps 
+   55  docker ps -a 
+   56  docker start 1587fbc96155
+   57  docker attach 1587fbc96155
+   58  ls
+   59  docker ps 
+   60  docker ps -a 
+   61  docker rm 1587fbc96155
+   62* docker ps -
+   63  docker rm *
+   64  docker rm -all
+   65  docker rm --all
+   66  docker rm --help
+   67  ls
+   68  docker ps 
+   69  docker ps -a
+   70  docker ps -aq
+   71  docker rm $(docker ps -aq)
+   72  docker ps -a 
+   73  ls
+   74  docker run -it centos
+   75  docker ps 
+   76  docker network ls 
+   77  ip addr 
+   78  iptables -L 
+   79  ls
+   80  docker ps 
+   81  docker inspect 0e4fa2099172
+   82  curl 172.17.0.2
+   83  history 
+   84  ls
+   85  cd jenkins-devops-062019/
+   86  ls
+   87  cd docker/
+   88  ls
+   89  history > Docker_Cmd.txt 
