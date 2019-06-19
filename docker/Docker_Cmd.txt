@@ -127,3 +127,45 @@
   125  cd docker/
   126  ls
   127  history > Docker_Cmd.txt 
+  128  git add . 
+  129  git commit -m "Docker Commit"
+  130  git push origin master 
+  131  cd
+  132  ls
+  133  ls -a 
+  134  pwd
+  135  ls -a 
+  136  ls
+  137  cd jenkins-devops-062019/
+  138  ls
+  139  s
+  140  sl
+  141  cd ks
+  142  ls
+  143  cd docker/
+  144  ls
+  145  mkdir dockerfiles/myapache -p 
+  146  cd dockerfiles/myapache/
+  147  ls
+  148  vim Dockerfile
+  149  docker images 
+  150  docker build -t mywebserver-ubuntu:v1 .
+  151  docker images 
+  152  docker run -itd --name webapp-ubuntu-cont-1 mywebserver-ubuntu:v1
+  153  docker ps 
+  154  docker inspect 175601f498f7
+  155  curl "172.17.0.4"
+  156  ls
+  157  echo "Welcome to Ubuntu Based Web App" > index.html
+  158  ls
+  159  vim Dockerfile 
+  160  docker build -t mywebserver-ubuntu:v2 .
+  161  docker run -itd --name webapp-ubuntu-cont-2 mywebserver-ubuntu:v2
+  162  curl "172.17.0.5"
+  163  ls
+  164  cd ..
+  165  ls
+  166  cd ..
+  167  ls
+  168  cd docker/
+  169  history > Docker_Cmd.txt 
