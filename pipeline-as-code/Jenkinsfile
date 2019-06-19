@@ -2,7 +2,7 @@
 node {
  
  stage('Pull Git Repo') {
-   git 'https://github.com/amitvashist7/jenkins-devops-062019.git'
+   git 'https://github.com/Ajaynano/jenkins-devops-062019.git'
 }
    def project_path = "atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/"
  
