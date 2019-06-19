@@ -89,3 +89,41 @@
    87  cd docker/
    88  ls
    89  history > Docker_Cmd.txt 
+   90  git add . 
+   91  git commit -m "Docker Containers"
+   92  git push origin master 
+   93  ls
+   94  cd 
+   95  ls
+   96  docker ps 
+   97  docker attach 0e4fa2099172
+   98  docker ps 
+   99  docker commit -p -m "My Centos WebServer" 0e4fa2099172 mywebserver-centos:v1
+  100  docker ps 
+  101  docker images 
+  102  docker run -itd mywebserver-centos:v1 /bin/bash 
+  103  docker ps 
+  104  docker inspect 6be6711b2f6a
+  105  curl "172.17.0.3"
+  106  docker run -itd --name webapp-A-cont-1 mywebserver-centos:v1 /bin/bash 
+  107  docker run -itd --name webapp-A-cont-2 mywebserver-centos:v1 /bin/bash 
+  108  docker run -itd --name webapp-A-cont-3 mywebserver-centos:v1 /bin/bash 
+  109  docker run -itd --name webapp-B-cont-1 mywebserver-centos:v1 /bin/bash 
+  110  docker run -itd --name webapp-C-cont-1 mywebserver-centos:v1 /bin/bash 
+  111  docker run -itd --name webapp-C-cont-2 mywebserver-centos:v1 /bin/bash 
+  112  docker ps 
+  113  docker ps | aws -F" " '{print $1,$2}'
+  114  docker ps | awk -F" " '{print $1,$2}'
+  115  docker ps | awk -F" " '{print $1,$2,$3}'
+  116  docker ps | awk -F" " '{print $1,$2,$3,$4}'
+  117  docker ps | awk -F" " '{print $1,$2,$3,$4,$5}'
+  118  docker ps 
+  119  docker ps | grep -i webapp-A-cont-*
+  120  docker ps | grep -i webapp-A-cont-* | awk -F" " '{ print $1}'
+  121  docker kill $(docker ps | grep -i webapp-A-cont-* | awk -F" " '{ print $1}')
+  122  ls
+  123  cd jenkins-devops-062019/
+  124  ls
+  125  cd docker/
+  126  ls
+  127  history > Docker_Cmd.txt 
