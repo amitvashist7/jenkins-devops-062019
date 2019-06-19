@@ -169,3 +169,31 @@
   167  ls
   168  cd docker/
   169  history > Docker_Cmd.txt 
+  170  git add . 
+  171  git commit -m "Dockerfile"
+  172  git push origin master 
+  173  ls
+  174  cd dockerfiles/
+  175  ls
+  176  cd myapache/
+  177  ls
+  178  cat Dockerfile 
+  179  cd 
+  180  curl "172.17.0.5"
+  181  curl localhost
+  182  netstat -tulnp 
+  183  docker run -itd -p 8080:80 --name webapp-ubuntu-cont-3 mywebserver-ubuntu:v2
+  184  docker ps 
+  185  netstat -tulnp 
+  186  curl localhost 
+  187  curl localhost:8080
+  188  docker run -itd -p 8081:80 --name webapp-ubuntu-cont-3 mywebserver-ubuntu:v1
+  189  docker run -itd -p 8081:80 --name webapp-ubuntu-cont-5 mywebserver-ubuntu:v1
+  190  docker ps 
+  191  netstat -tulnp
+  192  ls
+  193  cd jenkins-devops-062019/
+  194  ls
+  195  cd docker/
+  196  ls
+  197  history > Docker_Cmd.txt 
