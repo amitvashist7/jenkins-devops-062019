@@ -1,0 +1,11 @@
+    1  curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    2  chmod +x /usr/local/bin/docker-compose
+    3  docker version 
+    4  docker-compose version
+    5  cd jenkins-devops-062019/
+    6  ls
+    7  cd docker/
+    8  ls
+    9  mkdir docker-compose
+   10  cd docker-compose/
+   11  history > Install_Compose.txt
