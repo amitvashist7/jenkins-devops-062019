@@ -1,0 +1,500 @@
+    1  apt-get update; apt-get install git -y
+    2  exit
+    3  ls
+    4  history 
+    5  cd jenkins-devops-062019/
+    6  ls
+    7  mkdir jenkins
+    8  cd jenkins/
+    9  ls
+   10  history > Jenkins_History.txt
+   11  vim Jenkins_History.txt 
+   12  cd ..
+   13  ls
+   14  git add . 
+   15  git commit -m "Jenkins"
+   16  git push origin master 
+   17  ls
+   18  cd 
+   19  wget  http://mirrors.jenkins.io/war-stable/latest/jenkins.war 
+   20  ls
+   21  java -jar jenkins.war --httpPort=9091
+   22  git --version
+   23  ls
+   24  mkdir myproject
+   25  cd myproject/
+   26  ls
+   27  echo "# test-01" >> README.md
+   28  git init
+   29  ls -a 
+   30  git add README.md
+   31  git commit -m "ReadMe"
+   32  git remote add origin https://github.com/amitvashist7/test-01.git
+   33  git push -u origin master
+   34  history 
+   35  ls
+   36  ls -a 
+   37  ls
+   38  echo "Hello World" >>  Hello_world.txt
+   39  cat Hello_world.txt 
+   40  git push 
+   41  ls
+   42  git status 
+   43  git add Hello_world.txt
+   44  git status 
+   45  git log 
+   46  git commit -m "Hello World Files has been added"
+   47  git config --global --edi
+   48  git commit -m "Hello World Files has been added"
+   49  git log 
+   50  git push 
+   51  git status 
+   52  vim Hello_world.txt 
+   53  git status 
+   54  git add .
+   55  git status 
+   56  git commit -m "Hello World Files has been Modified"
+   57  git status 
+   58  git push 
+   59  history 
+   60  mkdir test01/blr/accenture/devops/ -p 
+   61  echo "Welcome to DevOps Demos" test01/blr/accenture/devops/demo01.txt
+   62  echo "Welcome to DevOps Demos" > test01/blr/accenture/devops/demo01.txt
+   63  git status 
+   64  git add . 
+   65  git status 
+   66  git commit -m "Multi Dir Demo."
+   67  git push 
+   68  history 
+   69  ls
+   70  mkdir multifile
+   71  ls
+   72  cd multifile/
+   73  ls
+   74  for i in {1.50}; do echo "Welcome to the world of Git Test - $i" > test-$i; done 
+   75  ls
+   76  for i in {1..50}; do echo "Welcome to the world of Git Test - $i" > test-$i; done 
+   77  ls
+   78  rm -rf test-{1.50}
+   79  sl
+   80  ls
+   81  cat test-1
+   82  cat test-20
+   83  cd ..
+   84  ls
+   85  git add . 
+   86  git status 
+   87  git commit -m "MultiFile"
+   88  git push 
+   89  ls
+   90  rm -rf multifile
+   91  ls
+   92  git status 
+   93  git add .
+   94  git status 
+   95  git push 
+   96  git commit -m "MultiFile Removed"
+   97  git push 
+   98  ls
+   99  echo "Apple Pie" | git  hash-object --stdin -w
+  100  echo "Amit Vashist" | git  hash-object --stdin -w
+  101  git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -t 
+  102  git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -p
+  103  git cat-file c42fe628543c9f330ea51dea312d32cd72d7f454 -p
+  104  cd .git/
+  105  ls
+  106  cd objects/
+  107  ls
+  108  cd 23
+  109  ls
+  110  cd ../../
+  111  ls
+  112  cd ..
+  113  history 
+  114  ls
+  115  git config 
+  116  git config --list 
+  117  ls
+  118  cd 
+  119  ls
+  120  git clone https://github.com/amitvashist7/jenkins-devops-062019.git
+  121  ls
+  122  cd myproject/
+  123  ls
+  124  cd ..
+  125  ls
+  126  cd jenkins-devops-062019/
+  127  ls
+  128  cd setup/
+  129  ls
+  130  cat Vagrantfile 
+  131  ls
+  132  cp -rf Vagrantfile /root/myproject/
+  133  cd /root/myproject/
+  134  ls
+  135  git commit -am "Vagrantfile"
+  136  git commit -am "Vagrantfile" .
+  137  git add . 
+  138  git commit -am "Vagrantfile" .
+  139  git commit -am "Vagrantfile" 
+  140  git push 
+  141  ls
+  142  git config --list 
+  143  cd ../jenkins-devops-062019/
+  144  git config --list 
+  145  ls
+  146  cd ../
+  147  ls
+  148  ls
+  149  git logs 
+  150  git log
+  151  git diff  46147e 673250
+  152  git branch 
+  153  cd  .git/branches/
+  154  ls
+  155  ls -a 
+  156  cd ..
+  157  ls
+  158  cat HEAD 
+  159  cat refs/heads/master 
+  160  git log 
+  161  ls
+  162  cd ..
+  163  ls
+  164  echo "Update2" >> Hello_world.txt 
+  165  git commit -am "update" 
+  166  cat refs/heads/master 
+  167  cat .git/refs/heads/master 
+  168  git log 
+  169  diff HEAD~1
+  170  git diff HEAD~1
+  171  git diff HEAD~2
+  172  git diff HEAD~3
+  173  git diff HEAD~4
+  174  history 
+  175  git diff HEAD~2..HEAD~3
+  176  history 
+  177  git log 
+  178  git log --oneline
+  179  git log --oneline --graph
+  180  git shortlog
+  181  history 
+  182  git show head 
+  183  git show HEAD
+  184  git branch
+  185  git branch uat
+  186  git branch
+  187  git branch prod 
+  188  git branch
+  189  git checkout uat 
+  190  git branch
+  191  ls
+  192  git show HEAD 
+  193  git checkout master
+  194  git branch
+  195  git show HEAD 
+  196  ls
+  197  echo "Amit" > Vashist.txt
+  198  git branch
+  199  git checkout uat
+  200  ls
+  201  cat Va
+  202  cat Vashist.txt 
+  203  git checkout master
+  204  ls
+  205  git add . 
+  206  git commit -m "Vashist"
+  207  git show HEAD 
+  208  git checkout uat
+  209  ls
+  210  echo "My UAT Branch Demo" > uat.txt
+  211  git add . 
+  212  git commit -m "UAT"
+  213  git push uat
+  214  git push origin uat
+  215  git checkout prod
+  216  ls
+  217  echo "My PROD Branch Demo" > prod.txt
+  218  git add . 
+  219  git commit -m "Prod"
+  220  git push origin prod
+  221  git log --oneline --graph
+  222  history 
+  223  ls
+  224  git branch 
+  225  git checkout master
+  226  ls
+  227  git merge prod
+  228  git merge prod -m "Merge Prod"
+  229  git logs 
+  230  git log
+  231  git push origin master
+  232  ls
+  233  git merge uat -m "Merge UAT"
+  234  ls
+  235  git branch 
+  236  git push origin master
+  237  git log --oneline --graph
+  238  history 
+  239  ls
+  240  cd 
+  241  ls
+  242  cd /tmp/
+  243  ls
+  244  git clone https://github.com/amitvashist7/test-01.git
+  245  ls
+  246  cd test-01/
+  247  ls
+  248  echo "Pull Request" > a.txt
+  249  git add . 
+  250  git commit -m "Pull Request"
+  251  git push origin master 
+  252  cd 
+  253  ls
+  254  cd myproject/
+  255  ls
+  256  git pull 
+  257  ls
+  258  echo "Test 2" > b.txt
+  259  git add . 
+  260  git commit -m "test 2 b.txt"
+  261  git push origin master
+  262  cd /tmp/
+  263  ls
+  264  cd test-01/
+  265  ls
+  266  vim a.txt 
+  267  ls
+  268  git add . 
+  269  git commit -m "Updated a.txt"
+  270  git push origin master 
+  271  git pull 
+  272  git push origin master 
+  273  git log  
+  274  history 
+  275  ls
+  276  cd ..
+  277  ls
+  278  cd ..
+  279  ls
+  280  cd 
+  281  ls
+  282  cd myproject/
+  283  ls
+  284  git branch 
+  285  git log 
+  286  ls
+  287  git tag
+  288  git tag myapp_2019_06_v1
+  289  git tag
+  290  git push --tags
+  291  ls
+  292  for i in {1..50}; do echo "Welcome to the world of Git Test - $i" > test-$i; done 
+  293  ls
+  294  git add . 
+  295  git commit 
+  296  git tags
+  297  git tag 
+  298  git push origin master 
+  299  git pull 
+  300  git push origin master 
+  301  ls
+  302  rm test-1*
+  303  ls
+  304  git add . 
+  305  git commit -m "Test 1* has been removed"
+  306  git push origin master 
+  307  rm test-2*
+  308  rm test-3*
+  309  ls
+  310  git add . 
+  311  git commit -m "Test 2&3* has been removed"
+  312  git push origin master 
+  313  git tag
+  314  git tag myapp_2019_06_v2
+  315  git push --tags
+  316  history 
+  317  ls
+  318  cd 
+  319  ls
+  320  rm -rf myproject
+  321  ls
+  322  java --version 
+  323  apt-get update; apt-get install openjdk-8 -y 
+  324  apt-get install default-jdk
+  325  java --version 
+  326  java -version 
+  327  ls
+  328  java -version 
+  329  ip addr 
+  330  init 0 
+  331  ls
+  332  cd jenkins-devops-062019/
+  333  ls
+  334  git log  
+  335  ls
+  336  echo  "01" > CHANGE_ME.txt
+  337  git add . 
+  338  git commit -m "Change Me"
+  339  git push origin master 
+  340  ls
+  341  cat CHANGE_ME.txt 
+  342  echo  "02" > CHANGE_ME.txt
+  343  git commit -m "Change Me - 02"
+  344  git add . 
+  345  git commit -m "Change Me - 02"
+  346  git push origin master 
+  347  git log 
+  348  ls
+  349  cd 
+  350  ls
+  351  cd /root/
+  352  ls
+  353  ls -l
+  354  ls -a
+  355  cd .jenkins/
+  356  ls
+  357  cd workspace/
+  358  ls
+  359  cd atmosphere-pipeline
+  360  ls
+  361  ls -ltr  atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/
+  362  ls -ltr  atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/pom.xml 
+  363  cd
+  364  ls
+  365  cd jenkins-devops-062019/
+  366  ls
+  367  mkdir pipeline
+  368  cd pipeline/
+  369  ls
+  370  vim basic
+  371  cd ..
+  372  git add .; 
+  373  git commit -m "Pipeline - Basic"
+  374  git push origin master 
+  375  ls
+  376  cd pipeline/
+  377  ls
+  378  vim stage
+  379  cd ..
+  380  git commit -m "Pipeline-Stages" ; git push origin master
+  381  git add . ;git commit -m "Pipeline-Stages" ; git push origin master
+  382  ls
+  383  vim pipeline/code-test-results
+  384  git add . ;git commit -m "Pipeline-Code-Test-Results" ; git push origin master
+  385  vim pipeline/parallel-Jobs
+  386  git add . ;git commit -m "Pipeline-Parallel-Jobs" ; git push origin master
+  387  ls
+  388  mkdir pipeline-as-code/
+  389  vim pipeline-as-code/Jenkinsfile
+  390  ls
+  391  git add . ;git commit -m "Pipeline-as-code" ; git push origin master
+  392  ls
+  393  vim pipeline-as-code/Jenkinsfile 
+  394  git add . ;git commit -m "Pipeline-as-code-modified" ; git push origin master
+  395  git showhead
+  396  git show HEAD
+  397  ls
+  398  cd 
+  399  ls
+  400  cd jenkins-devops-062019/
+  401  ls
+  402  git add . 
+  403  git commit -m "Docker-Compose-Demos"
+  404  git push origin master 
+  405  ls
+  406  cd docker/
+  407  ls
+  408  cd docker-compose/
+  409  ls
+  410  cd mailhog/
+  411  ls
+  412  cd
+  413  apt-get install ansible -y 
+  414  ls
+  415  ansible --version 
+  416  ls
+  417  cd jenkins-devops-062019/
+  418  ls
+  419  mkdir ansible
+  420  cd ansible/
+  421  ls
+  422  mkdir demo1
+  423  cd demo1/
+  424  ls
+  425  vim inventory
+  426  ssh vagrant@localhost
+  427  exir
+  428  exut
+  429  exit
+  430  ssh ubuntu@localhost
+  431  passwd ubuntu
+  432  ssh ubuntu@localhost
+  433  ssh ubuntu@172.31.0.11
+  434  ssh ubuntu@172.31.0.12
+  435  vi /etc/ssh/sshd_config 
+  436  ls
+  437  cd jenkins-devops-062019/ansible/demo1/
+  438  ls
+  439  cat inventory 
+  440  ansible all -i inventory -m ping -u ubuntu -k 
+  441  apt-get install sshpass -y 
+  442  ansible all -i inventory -m ping -u ubuntu -k 
+  443  ls
+  444  which python 
+  445  ls
+  446  vi inventory 
+  447  ansible all -i inventory -m ping -u ubuntu -k 
+  448  vi inventory 
+  449  ansible all -i inventory -m ping -u ubuntu -k 
+  450  ssh ubuntu@172.31.0.10
+  451  ssh ubuntu@172.31.0.11
+  452  ssh ubuntu@172.31.0.12
+  453  ansible all -i inventory -m ping -u ubuntu -k 
+  454  vi inventory 
+  455  ansible all -i inventory -m ping -u ubuntu -k 
+  456  pwd
+  457  ls
+  458  cat inventory 
+  459  vim inventory 
+  460  cat inventory 
+  461  ls
+  462  ansible all -i inventory -m ping -u ubuntu -k 
+  463  ls
+  464  cd ..
+  465  ls
+  466  cp -rf demo1 demo2 
+  467  ls
+  468  vim demo2/
+  469  vim demo2/inventory 
+  470  ansible web -i inventory -m ping -u ubuntu -k 
+  471  cat  demo2/inventory 
+  472  ansible web -i demo2/inventory -m ping -u ubuntu -k 
+  473  ansible db -i demo2/inventory -m ping -u ubuntu -k 
+  474  vim  demo2/inventory 
+  475  ansible prod -i demo2/inventory -m ping -u ubuntu -k 
+  476  ansible uat -i demo2/inventory -m ping -u ubuntu -k 
+  477  ansible UAT -i demo2/inventory -m ping -u ubuntu -k 
+  478  git add . ; git commit -m "ansible-code"; git push origin master 
+  479  ls
+  480  cp -rf demo2 demo3
+  481  ls
+  482  vim demo3/inventory 
+  483  ansible datacenter -i demo3/inventory -m ping -u ubuntu -k 
+  484  vim demo3/inventory 
+  485  ansible datacenter -i demo3/inventory -m ping -u ubuntu -k 
+  486  vim demo3/inventory 
+  487  ansible datacenter -i demo3/inventory -m ping
+  488  ansible-doc -l 
+  489  ansible-doc yum
+  490  df -h 
+  491  ansible datacenter -i demo3/inventory -m command -a 'df -h'
+  492  cat /etc/*-release
+  493  ansible datacenter -i demo3/inventory -m command -a 'cat /etc/*-release'
+  494  cat /etc/*-release'
+  495  cat /etc/*-release
+  496  ansible datacenter -i demo3/inventory -m command -a 'cat /etc/*-release'
+  497  ansible datacenter -i demo3/inventory -m shell -a 'cat /etc/*-release'
+  498  ls
+  499  history 
+  500  history  > ansible_history.txt
