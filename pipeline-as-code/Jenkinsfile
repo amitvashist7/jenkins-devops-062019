@@ -1,4 +1,6 @@
 node {
+
+notify('Started') 
  
  stage('Pull Git Latest Changes in the Repo') {
    git 'https://github.com/amitvashist7/jenkins-devops-062019.git'
@@ -34,6 +36,18 @@ node {
  
    
    }
+ notify('Completed') 
     
 }
 
+
+def notify(status){ 
+    emailext(
+        to: "amitvashist7@gmail.com",
+        subject: "${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+        body: """<p>${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+        <p>Check Console output at <a href='${env.BUILD_URL}'> ${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
+        )   
+    
+    
+}
