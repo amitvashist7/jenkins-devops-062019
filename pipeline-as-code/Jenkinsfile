@@ -28,6 +28,9 @@ notify('Started')
    junit 'target/surefire-reports/TEST-*.xml'
    }
    
+   stage('Deploy Atmosphere in stage - Docker Env') {
+   sh label: '', script: 'docker-compose up -d --build'
+   }
    
    stage('Archive Artifacts') {
    archive 'target/*.jar'
