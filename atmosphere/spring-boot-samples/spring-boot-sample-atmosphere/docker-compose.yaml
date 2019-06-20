@@ -1,0 +1,6 @@
+version: '2'
+services:
+  atmosphere:
+    build: .
+    ports:
+      - '30081:8080'
