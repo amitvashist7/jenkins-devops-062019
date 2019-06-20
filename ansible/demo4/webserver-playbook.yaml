@@ -1,6 +1,6 @@
 ---
 
-- hosts: web:&prod
+- hosts: prod
   sudo: yes 
 
   tasks:
@@ -9,3 +9,6 @@
 
   - name: Start Apache Service 
     service: name=apache2 state=started 
+
+  - name: Deploy Custom Index Page
+    copy: src=templates/index.html dest=/var/www/html/abc.html 
