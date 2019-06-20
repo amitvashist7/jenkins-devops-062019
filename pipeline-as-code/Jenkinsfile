@@ -1,16 +1,12 @@
 <<<<<<< HEAD
 
 node {
-notify('Started') 
+ notify('Started') 
  stage('Pull Git Repo') {
    git 'https://github.com/Ajaynano/jenkins-devops-062019.git'
 =======
-node {
- 
- stage('Pull Git Latest Changes in the Repo') {
-   git 'https://github.com/amitvashist7/jenkins-devops-062019.git'
->>>>>>> 4ffa78d0c42df068d27fb27ae5268a57ee3c951b
-}
+
+ }
    def project_path = "atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/"
  
    dir(project_path) { 
