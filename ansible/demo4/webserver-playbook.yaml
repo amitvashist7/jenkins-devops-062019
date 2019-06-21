@@ -1,0 +1,31 @@
+---
+
+- hosts: prod
+  sudo: yes
+  vars: 
+    doc_root: "/var/www/html" 
+
+  tasks:
+  - name: Install Apache Packages on Debian OS
+    apt: name=apache2 state=present
+    when: ansible_os_family == "Debian" 
+
+  - name: Start Apache Service on Debian OS
+    service: name=apache2 state=started 
+    when: ansible_os_family == "Debian"
+ 
+  - name: Install Apache Packages on RedHat Family
+    yum: name=httpd state=present
+    when: ansible_os_family == "RedHat"
+
+  - name: Start Apache Service on RedHat Family
+    service: name=httpd state=started 
+    when: ansible_os_family == "RedHat"
+
+  - name: Dragon ball Z
+    get_url: url="http://www.mariomayhem.com/downloads/wallpapers/2/nsmb_wp2_1024.jpg" dest={{doc_root}}/mario.jpg mode=0755
+  - name: Deploy Custom Index Page
+    copy: src=templates/index.html dest={{doc_root}}/abc.html
+ 
+  - name: Deploy Custom Info.j2 Template Page
+    template: src=templates/info.j2 dest={{doc_root}}/info.html 
