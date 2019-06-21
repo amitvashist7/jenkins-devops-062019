@@ -62,7 +62,10 @@
     copy: src=templates/atmosphere-v1.jar dest={{doc_root}}/atmosphere-v1.jar
 
   - name: Start the Atmosphere Chat Bot. 
-    shell: nohup /usr/bin/java -jar {{doc_root}}/atmosphere-v1.jar & > nohup.out 
+    shell: nohup /usr/bin/java -jar {{doc_root}}/atmosphere-v1.jar & > nohup.out
+
+  - name: Deploy Custom Index Page
+    copy: src=templates/index.html dest={{doc_root}}/index.html 
 
   handlers: 
   - name: Restart Apache
