@@ -25,5 +25,8 @@
   - name: Deploy Custom Index Page
     copy: src=templates/index.html dest={{doc_root}}/abc.html
  
+  - name: Download Mario Background Image
+    get_url: url="http://www.mariomayhem.com/downloads/wallpapers/2/nsmb_wp2_1024.jpg" dest={{doc_root}}/mario.jpg mode=0755
+  
   - name: Deploy Custom Info.j2 Template Page
     template: src=templates/info.j2 dest={{doc_root}}/info.html 
