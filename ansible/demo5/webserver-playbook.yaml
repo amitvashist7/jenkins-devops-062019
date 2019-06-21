@@ -1,7 +1,9 @@
 ---
 
 - hosts: prod
-  sudo: yes 
+  sudo: yes
+  vars: 
+    doc_root: "/var/www/html" 
 
   tasks:
   - name: Install Apache Packages on Debian OS
@@ -21,4 +23,7 @@
     when: ansible_os_family == "RedHat"
 
   - name: Deploy Custom Index Page
-    copy: src=templates/index.html dest=/var/www/html/abc.html 
+    copy: src=templates/index.html dest={{doc_root}}/abc.html
+ 
+  - name: Deploy Custom Info.j2 Template Page
+    template: src=templates/info.j2 dest={{doc_root}}/info.html 
