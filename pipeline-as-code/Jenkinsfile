@@ -37,7 +37,7 @@ notify('Started')
 
    stage('Getting Ready For Ansible') {
    sh label: '', script: 'cp -rf target/spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar ../../../ansible/demo7/templates/atmosphere-v1.jar'
-   sh label: '', script: "echo '<h1>JENKINS TASK BUILD ID: ${env.BUILD_NUMBER}</h1>'" > ../../../ansible/demo7/templates/index.html'
+   sh label: '', script: "echo '<h1>JENKINS TASK BUILD ID: ${env.BUILD_NUMBER}</h1>' > ../../../ansible/demo7/templates/index.html"
    }
 
 
