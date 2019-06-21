@@ -38,7 +38,7 @@ notify('Started')
 
 
    stage('Prod Deployment via Ansible') {
-   sh label: '', script: 'ansible-playbook  -i ../../../ansible/demo7/inventory ../../../ansible/demo4/webserver-playbook.yaml'
+   sh label: '', script: 'ansible-playbook  -i ../../../ansible/demo4/inventory ../../../ansible/demo4/webserver-playbook.yaml'
    }
 
 
