@@ -1,0 +1,62 @@
+---
+
+- hosts: prod
+  sudo: yes
+  vars: 
+    doc_root: "/var/www/html/ansible-test-04" 
+    http_port: 80
+    name: Ansible-Test-04
+
+  tasks:
+  - name: Install Apache Packages on Debian OS
+    apt: name=apache2 state=present
+    when: ansible_os_family == "Debian" 
+
+  - name: Start Apache Service on Debian OS
+    service: name=apache2 state=started 
+    when: ansible_os_family == "Debian"
+ 
+  - name: Install Apache Packages on RedHat Family
+    yum: name=httpd state=present
+    when: ansible_os_family == "RedHat"
+
+  - name: Start Apache Service on RedHat Family
+    service: name=httpd state=started 
+    when: ansible_os_family == "RedHat" 
+
+  - debug: msg="This Site is presented by{{name}}"
+ 
+  - name: Deploy Custom Index Page
+    template: src=templates/apache2.j2 dest=/etc/apache2/apache2.conf
+    notify: 
+      - Restart Apache
+
+  - name: Force Restart 
+    meta: flush_handlers
+
+  - name: Check the Site Location
+    command: ls {{doc_root}}
+    register: result
+    ignore_errors: yes
+
+
+  - name: Create a Site Location
+    file: path={{doc_root}} state=directory
+    when: result|failed
+    notify:
+      - Test 
+
+  - name: Deploy Custom Index Page
+    copy: src=templates/index.html dest={{doc_root}}/abc.html
+ 
+  - name: Download Mario Background Image
+    get_url: url="http://www.mariomayhem.com/downloads/wallpapers/2/nsmb_wp2_1024.jpg" dest={{doc_root}}/mario.jpg mode=0755
+  
+  - name: Deploy Custom Info.j2 Template Page
+    template: src=templates/info.j2 dest={{doc_root}}/info.html 
+
+  handlers: 
+  - name: Restart Apache
+    service: name=apache2 state=restarted
+  - name: Test
+    command: echo "Welcome to the world of Ansible"
