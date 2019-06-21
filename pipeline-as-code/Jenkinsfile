@@ -32,6 +32,16 @@ notify('Started')
    sh label: '', script: 'docker-compose up -d --build'
    }
    
+   stage('Getting Ready For Ansible') {
+   sh label: '', script: 'cp -rf target/spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar ../../../ansible/demo4/templates/atmosphere-v1.jar'
+   }
+
+
+   stage('Prod Deployment via Ansible') {
+   sh label: '', script: 'ansible-playbook  -i ../../../ansible/demo7/inventory ../../../ansible/demo4/webserver-playbook.yaml'
+   }
+
+
    stage('Archive Artifacts') {
    archive 'target/*.jar'
    }
