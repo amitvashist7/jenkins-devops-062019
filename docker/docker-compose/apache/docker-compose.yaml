@@ -1,0 +1,6 @@
+version: '2'
+services:
+  ubuntu-apache:
+    build: .
+    ports:
+      - '30081:80'
