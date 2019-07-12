@@ -20,11 +20,7 @@ notify('Started')
    sh label: '', script: 'mvn verify'
    }
    
- stage('Parallel Jobs') 
- parallel "Code Quality Publish":{
-   publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'target/site/jacoco/', reportFiles: 'index.html', reportName: 'Jococo Code Quality Report', reportTitles: 'Code Quality Report'])
-   },
-  "Test Results Publish": {
+ stage('Parallel Jobs') {
    junit 'target/surefire-reports/TEST-*.xml'
    }
    
