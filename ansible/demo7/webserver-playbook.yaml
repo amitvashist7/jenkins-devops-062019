@@ -1,6 +1,6 @@
 ---
 
-- hosts: prod
+- hosts: web
   sudo: yes
   vars: 
     doc_root: "/var/www/html/ansible-test-04" 
