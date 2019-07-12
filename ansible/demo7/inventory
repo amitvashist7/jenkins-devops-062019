@@ -1,29 +1,21 @@
-172.31.0.10
-172.31.0.11
-172.31.0.12
+172.31.9.147
+
 
 [web]
-172.31.0.11
+172.31.9.147
 
 [db]
-172.31.0.12
-
-[ansible]
-172.31.0.10
+172.31.14.110
 
 
-[prod]
-172.31.0.11
-172.31.0.12
+[web:vars]
+ansible_ssh_user=root
+ansible_ssh_pass=Redhat@123
 
-[UAT]
-172.31.0.10
+[dc:children]
+web
+db
 
-[datacenter:children]
-prod
-UAT
-
-
-[datacenter:vars]
-ansible_ssh_user=ubuntu
+[dc:vars]
+ansible_ssh_user=root
 ansible_ssh_pass=redhat
