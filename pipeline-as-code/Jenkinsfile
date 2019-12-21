@@ -19,6 +19,13 @@ notify('Started')
    stage('Code Quality') {
    sh label: '', script: 'mvn verify'
    }
+    
+   stage('SonarQube analysis') {
+   def mvnHome = tool name: 'mvn', type: 'maven'
+   withSonarQubeEnv('sonarqube'){
+   sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
+    }
+   }
    
  stage('Parallel Jobs') 
  parallel "Code Quality Publish":{
